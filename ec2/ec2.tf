@@ -14,14 +14,14 @@ resource "aws_security_group" "allow_tls" {
     name = "allow_tls_1"
     description = "Allow TLS inbound traffic and all outbound traffic"
 
-    ingress = {
+    ingress {
         from_port = 22
         to_port = 22
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
     }
     
-    egress = {
+    egress {
         from_port = 0
         to_port = 0
         protocol = "-1"
